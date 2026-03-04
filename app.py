@@ -62,7 +62,7 @@ async def delayed_trigger():
     await triggle_hugface()
     print('开始重启了', flush=True)
 
-    trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'ui', 'workflow.yml')
+    trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'danmu_web', 'player.yaml')
     await asyncio.sleep(3)
 
     trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, REPO_NAME, WORKFLOW_FILE,
@@ -74,7 +74,8 @@ async def triggle_hugface():
             'https://jokkad-jab-tel.hf.space',
             'https://jokkad-vscode.hf.space/',
             'https://jokkad-code.hf.space',
-            'https://jokkad-code02.hf.space'
+            'https://jokkad-code02.hf.space',
+            'https://tanlang001-code.hf.space'
             ]
     async with httpx.AsyncClient() as client:
         tasks = []
