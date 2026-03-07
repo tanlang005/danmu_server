@@ -60,12 +60,12 @@ async def delayed_trigger():
     # await asyncio.sleep(60)
     await triggle_hugface()
     print('开始重启了', flush=True)
-
-    trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'danmu_web', 'player.yaml')
-    await asyncio.sleep(3)
-
     trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, REPO_NAME, WORKFLOW_FILE,
                                                      inputs={"reason": "启动后定时器20分钟触发"})
+    
+    trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'danmu_web', 'player.yaml')
+
+   
 
 async def triggle_hugface():
     urls = ['https://tanlang001-sb.hf.space',
