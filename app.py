@@ -56,7 +56,7 @@ async def delayed_trigger():
 
     extra_time = random.choice(extra_time)
 
-    await asyncio.sleep(60 *6*(20 + extra_time))
+    await asyncio.sleep(60 *60 * 4 + 2 * (20 + extra_time))
     # await asyncio.sleep(60)
     await triggle_hugface()
     print('开始重启了', flush=True)
